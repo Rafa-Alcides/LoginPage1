@@ -34,9 +34,9 @@ class LoginPage extends StatelessWidget {
         height: 40,
         child: Row(
           children: <Widget>[
-            Image.asset("assets/imagem/pngwing.com.png"),
+            Image.asset("assets/imagem/drawer.png"),
             Expanded(child: Container()),
-            Image.asset("assets/imagem/pngwing.com (1).png"),
+            Image.asset("assets/imagem/logo.png"),
           ],
         ),
       ),
