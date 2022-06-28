@@ -23,12 +23,33 @@ class LoginPage extends StatelessWidget {
     );
   }
 
+  _toolBar() {
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 30,
+        left: 20,
+        right: 20,
+      ),
+      child: SizedBox(
+        height: 40,
+        child: Row(
+          children: <Widget>[
+            Image.asset("assets/imagem/pngwing.com.png"),
+            Expanded(child: Container()),
+            Image.asset("assets/imagem/pngwing.com (1).png"),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
         _columnWidget(),
         _buttonMid(),
+        _toolBar(),
       ],
     );
   }
