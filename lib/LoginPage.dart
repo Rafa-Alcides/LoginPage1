@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:login_page/login-container.dart';
 import 'package:login_page/social-container.dart';
@@ -8,18 +10,9 @@ class LoginPage extends StatelessWidget {
   _columnWidget() {
     return Column(
       children: const <Widget>[
-        Expanded(child: LoginContainer()),
-        Expanded(child: SocialContainer())
+        Expanded(flex: 3, child: LoginContainer()),
+        Expanded(flex: 1, child: SocialContainer())
       ],
-    );
-  }
-
-  _buttonMid() {
-    return const Center(
-      child: CircleAvatar(
-        maxRadius: 30.0,
-        child: Icon(Icons.keyboard_arrow_down),
-      ),
     );
   }
 
@@ -48,7 +41,6 @@ class LoginPage extends StatelessWidget {
     return Stack(
       children: <Widget>[
         _columnWidget(),
-        _buttonMid(),
         _toolBar(),
       ],
     );
